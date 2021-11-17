@@ -49,9 +49,6 @@ toys.push(scrabble);
 toys.push(heMan);
 
 for (const toy of toys) {
-    console.log("The toys we have available are: " + toy.name);
-};
-
-for (const toy of toys) {
-    console.log(`${toy.name} costs $${toy.price}.`)
+    toy.price = toy.price * 1.05;
+    console.log(`The price of ${toy.name} is ${toy.price}`)
 }
