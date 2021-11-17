@@ -1,3 +1,4 @@
+let toyToFind = 5;
 const toys = [
      {
         id: 1,
@@ -49,6 +50,14 @@ toys.push(scrabble);
 toys.push(heMan);
 
 for (const toy of toys) {
+    if (toy.id === toyToFind) {
     toy.price = toy.price * 1.05;
-    console.log(`The price of ${toy.name} is ${toy.price}`)
-}
+    console.log(`${toy.name} costs $${toy.price} and weighs ${toy.weight} oz.`)
+
+    if (toy.inStock === true) {
+        console.log(`This item is in stock.`)
+    } else {
+        console.log(`This item is out of stock.`);
+    }
+    }
+    }
